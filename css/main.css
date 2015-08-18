@@ -1,0 +1,793 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* {
+    list-style-type: none;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+*/
+
+/*work out how to do the  flex in the body and then put it in here so that I can finlally get back to making my website for mobile
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+    font-family: "Arial";
+	transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+header{
+	background-color:rgba(184, 178, 167, 1);
+	flex: 1 0 content;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+#logo{
+    display: flex;
+    flex: 1 0 100%;
+    margin: 0 1em;
+}
+
+main{
+	background-color:rgb(210, 202, 189);
+	flex: 1 1 auto ;
+}
+main h1, h2, h3{
+    color:rgb(255, 255, 255);
+    margin: .5em 0 0 0;
+}
+
+main p{
+    color:rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    margin: 0 0 .5em 0;
+}
+
+button{
+    display: block;
+    /*flex: 0 0 50%;
+    flex-wrap: wrap;
+    flex-direction: column;*/
+    height: 2.5em;
+}
+
+.sections{
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 2.5em;
+    text-align: center;
+    line-height: 2.5em;
+    color:rgb(255, 255, 255);    
+    border: thin solid rgb(184, 178, 167);
+}
+
+.grid{
+    flex: 0 0 80%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    }
+
+footer{
+	background-color:rgba(184, 178, 167, 1);
+	flex: 0 0 100%;
+    height: 2em;
+    color:rgb(255, 255, 255);
+}
+
+.gridBox{
+    flex: 1 0 30%;
+    height: 4.8em;
+    display: flex;
+    margin: .2em;
+    background-color:rgba(255, 255, 255, 1);
+}
+
+#homeContent{
+    flex: 1 0 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(103,100,93, 1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    list-style-type: none;
+}
+
+#homeContent.show{
+    height: 10em;
+}
+
+#aboutContent{
+    flex: 1 0 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(103,100,93, 1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    list-style-type: none;
+}
+
+#aboutContent.show{
+    height: 12em;
+}
+
+#serviceContent{
+    flex: 1 0 80%;
+    flex-wrap: wrap;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(103,100,93, 1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    list-style-type: none;
+}
+
+#serviceContent.show{
+    height: 30em;
+}
+
+#sub{
+    flex: 1 0 50%;
+}
+
+#icons{
+    width: 20%;
+    flex: 1 0 20%;
+    margin: 0;
+    padding: 0;
+    /*outline: thin solid red;*/
+}
+
+#workContent{
+    flex: 1 0 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(103,100,93, 1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    list-style-type: none;
+}
+
+#workContent.show{
+    height: 24em;
+}
+
+#formContent{
+    flex: 1 0 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    background-color:rgba(103,100,93, 1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    list-style-type: none;
+}
+
+#formContent.show{
+    height: auto;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    flex-direction: column;
+    background-color:rgba(103,100,93, 1);
+    max-width: 90%;
+}
+
+.formInput{
+    border-radius: 0;
+    margin: .5em 1em;
+}
+
+.formMessage{
+    margin: .5em 1em;
+    height: 10em;
+}
+
+
+.mainHeading{
+    font-size: 1em;
+    font-weight: 500;
+    margin: .5em;
+}
+.subHeading{
+    font-size: 1em;
+    margin: 0 0;
+    font-weight: 600;
+    margin: .5em;
+}
+
+.mainText{
+    font-size: .8em;
+    margin: 0 0 .5em .5em;
+}
+
+.submit{
+
+}
+
+nav{
+    display: none;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 24em) {
+
+    header{
+    }
+
+    main{
+
+    }
+
+    #homeContent.show{
+        height: 14em;
+    }
+
+    #aboutContent.show{
+        height: 18em;
+    }
+
+    #serviceContent.show{
+        height: 41em;
+    }
+
+    #workContent.show{
+        height: 25em;
+    }
+
+    #formContent.show{
+        height: 23em;
+    }
+
+    .sections{
+        height: 3em;
+        line-height: 3em;
+        font-size: 1.4em
+    }
+
+    .mainHeading{
+        font-size: 1.5em;
+        font-weight: 500;
+        margin: .5em;
+    }
+    .subHeading{
+        font-size: 1.3em;
+        margin: 0 0;
+        font-weight: 600;
+        margin: .5em;
+    }
+
+    .mainText{
+        font-size: 1.1em;
+        margin: 0 0 .5em .5em;
+    }
+
+
+    footer{
+        height: 3em;
+    }
+
+}
+
+
+@media only screen and (min-width: 44em) {
+    
+    header{
+    }
+
+    main{
+        display: flex;
+        flex: 1 0 100%;
+        flex-direction: column;
+    }
+
+    #homeContent.show{
+        height: ;
+    }
+
+    #aboutContent.show{
+        height: 21em;
+    }
+
+    #serviceContent.show{
+        height: 69em;
+    }
+
+    #workContent.show{
+        height: 31em;
+    }
+
+    #formContent.show{
+        height: 22em;
+    }
+
+    .sections{
+        height: 3em;
+        line-height: 3em;
+        font-size: 1.4em
+    }
+
+    .mainHeading{
+        font-size: 2em;
+        font-weight: 500;
+        margin: .5em;
+    }
+    .subHeading{
+        font-size: 1.8em;
+        margin: 0 0;
+        font-weight: 600;
+        margin: .5em;
+    }
+
+    .mainText{
+        font-size: 1.6em;
+        margin: 0 0 .5em .5em;
+    }
+
+    .gridBox{
+        height: 5.8em;
+        margin: .3em;
+    }
+
+    footer{
+        height: 3em;
+    }
+    
+}
+
+
+@media only screen and (min-width: 64em) {
+    /* Style adjustments for viewports that meet the condition */
+    
+a{
+    
+}
+a:hover{
+    
+}
+
+header{
+}
+#logo{
+    
+    
+}
+
+#nav{
+	
+}
+
+#nav.show{
+	
+}
+
+#nav li{
+	
+}
+#nav li a{
+    
+}
+
+
+
+main{
+	
+}
+main h1, h2, h3{
+    
+}
+
+main p{
+    
+}
+
+.sections{
+    
+}
+
+.grid{
+}
+
+footer{
+	
+}
+
+.gridBox{
+    
+}
+
+#homeContent{
+    height: 0;
+}
+
+#homeContent.show{
+    height: 0;
+}
+
+#aboutContent{
+   height: 0;
+}
+
+#aboutContent.show{
+    height: 0;
+}
+
+#serviceContent{
+    height: 0;
+}
+
+#serviceContent.show{
+    height: 0;
+}
+
+#workContent{
+    height: 0;
+}
+
+#workContent.show{
+    height: 0;
+}
+
+#formContent{
+    height: 0;
+}
+
+#formContent.show{
+    height: 0;
+}
+
+.form{
+    
+}
+
+.formInput{
+    
+}
+
+.formMessage{
+        height: 15em;
+}
+
+
+.mainHeading{
+    
+}
+.subHeading{
+    
+}
+
+.mainText{
+    
+}
+    
+    #box1, #box2, #box3, #box4, #box5, .sections, .boxLinks{
+        height: 0;
+    } 
+    
+    #homeContent, #aboutContent, #serviceContent, #workContent, #formContent, #homeContent.show, #aboutContent.show, #serviceContent.show, #workContent.show, #formContent.show{
+        height: 0;
+    }
+
+    /*DESKTOP BREAKPOINT*/
+    
+    nav{
+        display: block;
+
+        outline: thin solid blue;
+
+    }
+    nav ul{
+        display: flex;
+    }
+
+    nav a{
+        height: 2em;
+        border: thin solid black;
+        margin: 0 .1em;
+        flex: 0 0 18%;
+    }
+
+    nav.show{
+
+    }
+
+    #allContent{
+        display: flex;
+        height: 10em;
+        flex: 1 0 60%;
+        flex-wrap: wrap;
+        outline: thin solid red;
+    }
+    
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
